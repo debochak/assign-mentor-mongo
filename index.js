@@ -8,6 +8,12 @@ const mongoClient = mongodb.MongoClient;
 // const dbUrl = "mongodb://127.0.0.1:27017";
 const dbUrl = "mongodb+srv://debopam:debopam@cluster0.aqd3g.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
+//Homepage
+
+app.get("/", (req,res)=>{
+    res.status(200).send("This is the home page. use /mentor to add mentor, /student to add student, /mentor-assign/:mentor to assign students to mentor, /change-mentor/:student to change mentor")
+})
+
 //Get the mentor details
 
 app.get("/mentor", async (req,res)=>{
